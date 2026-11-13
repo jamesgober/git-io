@@ -1,13 +1,12 @@
 # git-io &mdash; Engineering Directives
 
 > Engineering standards and the definition of done for this project. Read alongside `REPS.md` (root, authoritative) and `dev/ROADMAP.md` (current phase). If anything here conflicts with `REPS.md`, `REPS.md` wins.
-> LexerSketch plan: `C:/Dev/libraries/Rust/lang-collection/_lexersketch/` (README rules of engagement, ARCHITECTURE, ISSUES, ROADMAP).
 
 ---
 
 ## 0. Philosophy
 
-This library is built and maintained to a production standard and treated as a flagship piece of work. Plan the full path, then build one verified step at a time. "Good enough" is treated as a defect. It is an `-io` pipeline in the owner's net-collection, used by LexerSketch to publish languages to GitHub without shelling out to git.
+This library is built and maintained to a production standard and treated as a flagship piece of work. Plan the full path, then build one verified step at a time. "Good enough" is treated as a defect. It is an `-io` pipeline in the owner's net-collection, used by the toolchain to publish languages to GitHub without shelling out to git.
 
 ---
 
@@ -15,7 +14,7 @@ This library is built and maintained to a production standard and treated as a f
 
 git-io owns git objects, packfile reading and writing, ref handling, and the smart-HTTP wire protocol. Hashing and compression come from the owner's crypto and compression libraries; TLS from the owner's TLS client.
 
-LexerSketch's publish step (ARCHITECTURE section 13.4, decision D2) must not depend on rented tools.
+The toolchain's publish step (ARCHITECTURE section 13.4, decision D2) must not depend on rented tools.
 
 ---
 
@@ -42,7 +41,7 @@ LexerSketch's publish step (ARCHITECTURE section 13.4, decision D2) must not dep
 6. Property tests cover every section-4 invariant; a fuzz target exists for every decoder or parser.
 7. Hot-path changes carry benchmarks; no regression over 5%.
 8. `README.md`, `docs/API.md`, and `CHANGELOG.md` updated; the matching `docs/release/vX.Y.Z.md` written before the tag.
-9. v1.0.0 only after a real consumer has exercised the API end to end (LexerSketch decision D18).
+9. v1.0.0 only after a real consumer has exercised the API end to end (decision D18).
 
 ---
 
