@@ -18,7 +18,7 @@
 
 <div align="left">
     <p>
-        <strong>git-io</strong> speaks git natively: the object model (blobs, trees, commits, tags), loose objects and packfiles, refs, and the smart-HTTP protocol for push and fetch, so tools can publish to GitHub without shelling out to the git binary. Transport security comes from the owner's TLS library (see the LexerSketch TLS-CRYPTO handoff).
+        <strong>git-io</strong> speaks git natively: the object model (blobs, trees, commits, tags), loose objects and packfiles, refs, and the smart-HTTP protocol for push and fetch, so tools can publish to GitHub without shelling out to the git binary. Transport security comes from the owner's TLS library (see the toolchain's TLS-CRYPTO handoff).
     </p>
     <br>
     <hr>
